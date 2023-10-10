@@ -1,39 +1,29 @@
-import { useTranslation } from 'react-i18next'
-import i18n from 'i18next'
-import '../../locale'
+import { useTranslation } from 'react-i18next';
+import i18n from 'i18next';
 
-const SELECT = [
-  {
-    key: 'ru',
-    value: 'Russian'
-  },
-  {
-    key: 'en',
-    value: 'English'
-  }
-]
+const LANGUAGES = ['ru', 'en'];
 
 const Header = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
   const langChangeHandler = ({ target: { value } }) => {
-    i18n.changeLanguage(value)
-  }
+    i18n.changeLanguage(value);
+  };
+
+  const currentLanguage = i18n.language;
+
   return (
     <header>
       <span>{t('creatorName')}</span>
 
-      <select onChange={langChangeHandler}>
-        {SELECT.map(lang => (
-          <option key={lang.key} value={lang.key}>
-            {t(lang.value)}
+      <select onChange={langChangeHandler} defaultValue={currentLanguage}>
+        {LANGUAGES.map(lang => (
+          <option key={lang} value={lang}>
+            {t(lang)}
           </option>
         ))}
-        {/* <option value='en'>English</option>
-
-        <option value='ru'>Russian</option> */}
       </select>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
