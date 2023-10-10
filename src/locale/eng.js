@@ -6,6 +6,9 @@ const englishTranslation = {
   services: 'Services',
   skills: 'Skills',
   feedBack: 'FeedBack',
+  //  => select's values
+  ru: 'Russian',
+  en: 'English',
 };
 
 export default englishTranslation;
