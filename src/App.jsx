@@ -1,7 +1,9 @@
 import './App.scss'
+import Header from './components/Header'
+import './locale'
 
 function App () {
-  return <div>Hello World</div>
+  return <Header />
 }
 
 export default App
