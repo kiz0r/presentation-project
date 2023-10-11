@@ -1,9 +1,9 @@
 import './App.scss'
-import Header from './components/Header'
+import FrontSection from './components/FrontSection'
 import './locale'
 
 function App () {
-  return <Header />
+  return <FrontSection />
 }
 
 export default App

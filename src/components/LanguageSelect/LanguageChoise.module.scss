@@ -20,6 +20,12 @@
   }
 }
 
+.selectWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .languageOption {
   li {
     padding: 0.5rem 1rem;

@@ -62,7 +62,7 @@ const LanguageSelect = () => {
   const currentLanguage = i18n.language
 
   return (
-    <div>
+    <div className={styles.selectWrapper}>
       <motion.button
         className={languageButton}
         onClick={() => setIsOpen(!isOpen)}

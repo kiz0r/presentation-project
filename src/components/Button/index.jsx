@@ -1,10 +1,17 @@
 import styles from './Button.module.scss'
+import { motion } from 'framer-motion'
 
-const Button = ({ onClick, children, restProps }) => {
+const Button = ({ onClick, style, children, restProps }) => {
   return (
-    <button className={styles.btn} onClick={onClick} {...restProps}>
+    <motion.button
+      whileTap={{ scale: 0.97 }}
+      className={styles.btn}
+      style={style}
+      onClick={onClick}
+      {...restProps}
+    >
       {children}
-    </button>
+    </motion.button>
   )
 }
 
