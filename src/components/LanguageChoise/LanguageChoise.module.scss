@@ -2,13 +2,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1em;
-  padding: 0.5em 1em;
+
+  gap: 2rem;
+  padding: 0.5rem 1em;
+
+  border: none;
+
+  cursor: pointer;
+
+  background-color: transparent;
+  color: inherit;
+
+  font-size: 16px;
+
+  svg {
+    font-size: 12px;
+  }
 }
 
 .languageOption {
-  & > li {
-    padding: 0.5em;
+  li {
+    padding: 0.5rem 1rem;
+    text-align: left;
     cursor: pointer;
   }
 }

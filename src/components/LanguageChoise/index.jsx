@@ -1,12 +1,12 @@
-import { useState } from 'react';
-import { useTranslation } from 'react-i18next';
-import { motion, AnimatePresence } from 'framer-motion';
-import i18n from 'i18next';
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import { motion, AnimatePresence } from 'framer-motion'
+import i18n from 'i18next'
+import { BiSolidDownArrow } from 'react-icons/bi'
+import { LANGUAGES } from '../../constants'
+import styles from './LanguageChoise.module.scss'
 
-import { LANGUAGES } from '../../constants';
-import styles from './LanguageChoise.module.scss';
-
-const { languageButton, languageOption } = styles;
+const { languageButton, languageOption } = styles
 
 const itemVariants = {
   open: {
@@ -15,8 +15,8 @@ const itemVariants = {
     transition: {
       type: 'spring',
       bounce: 0,
-      duration: 0.7,
-    },
+      duration: 0.7
+    }
   },
   closed: {
     opacity: 0,
@@ -24,21 +24,42 @@ const itemVariants = {
     transition: {
       type: 'spring',
       bounce: 0,
-      duration: 0.3,
-    },
+      duration: 0.3
+    }
+  }
+}
+
+const ulVariants = {
+  open: {
+    clipPath: 'inset(0% 0% 0% 0% round 10px)',
+    transition: {
+      type: 'spring',
+      bounce: 0,
+      duration: 0.7,
+      delayChildren: 0.3,
+      staggerChildren: 0.05
+    }
   },
-};
+  closed: {
+    clipPath: 'inset(10% 50% 90% 50% round 10px)',
+    transition: {
+      type: 'spring',
+      bounce: 0,
+      duration: 0.3
+    }
+  }
+}
 
 const LanguageChoise = () => {
-  const { t } = useTranslation();
-  const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation()
+  const [isOpen, setIsOpen] = useState(false)
 
   const langChangeHandler = value => {
-    i18n.changeLanguage(value);
-    setIsOpen(!isOpen);
-  };
+    i18n.changeLanguage(value)
+    setIsOpen(!isOpen)
+  }
 
-  const currentLanguage = i18n.language;
+  const currentLanguage = i18n.language
 
   return (
     <div>
@@ -52,14 +73,16 @@ const LanguageChoise = () => {
         <motion.div
           variants={{
             open: { rotate: 180 },
-            closed: { rotate: 0 },
+            closed: { rotate: 0 }
           }}
+          initial='closed'
+          animate={isOpen ? 'open' : 'closed'}
           transition={{ duration: 0.2 }}
-          style={{ originY: 0.55 }}
+          style={{
+            originY: 0.5
+          }}
         >
-          <svg width='15' height='15' viewBox='0 0 20 20'>
-            <path d='M0 7 L 20 7 L 10 16' />
-          </svg>
+          <BiSolidDownArrow />
         </motion.div>
       </motion.button>
       <AnimatePresence>
@@ -67,26 +90,7 @@ const LanguageChoise = () => {
           <motion.ul
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            variants={{
-              open: {
-                clipPath: 'inset(0% 0% 0% 0% round 10px)',
-                transition: {
-                  type: 'spring',
-                  bounce: 0,
-                  duration: 0.7,
-                  delayChildren: 0.3,
-                  staggerChildren: 0.05,
-                },
-              },
-              closed: {
-                clipPath: 'inset(10% 50% 90% 50% round 10px)',
-                transition: {
-                  type: 'spring',
-                  bounce: 0,
-                  duration: 0.3,
-                },
-              },
-            }}
+            variants={ulVariants}
             className={languageOption}
             style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
           >
@@ -104,7 +108,7 @@ const LanguageChoise = () => {
         )}
       </AnimatePresence>
     </div>
-  );
-};
+  )
+}
 
-export default LanguageChoise;
+export default LanguageChoise
