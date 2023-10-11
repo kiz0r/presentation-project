@@ -1,0 +1,16 @@
+.btn {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Raleway', sans-serif;
+  padding: 0.8em 1.2em;
+  border-radius: 40px;
+  background-color: #ba3939;
+  height: auto;
+  border: none;
+  color: #f2f0d8;
+  cursor: pointer;
+  transition: background-color ease 0.7s;
+  &:hover {
+    background-color: #992c2c;
+  }
+}

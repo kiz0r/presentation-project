@@ -1,16 +1,19 @@
 import { useTranslation } from 'react-i18next'
+import Button from '../Button'
 import Nav from '../Nav'
 import LanguageSelect from '../LanguageSelect'
 import styles from './Header.module.scss'
 
-const { header, myNameSpan } = styles
-
 const Header = () => {
   const { t } = useTranslation()
 
+  const pageReloadHandler = () => {
+    window.location.reload()
+  }
+
   return (
-    <header className={header}>
-      <span className={myNameSpan}>{t('creatorName')}</span>
+    <header className={styles.header}>
+      <Button onClick={pageReloadHandler}>{t('creatorName')}</Button>
       <Nav />
       <LanguageSelect />
     </header>
