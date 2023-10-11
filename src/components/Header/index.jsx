@@ -1,27 +1,17 @@
 import { useTranslation } from 'react-i18next';
-import i18n from 'i18next';
+import LanguageChoise from '../LanguageChoise';
+import styles from './Header.module.scss';
 
-const LANGUAGES = ['ru', 'en'];
+const { header, myNameSpan } = styles;
 
 const Header = () => {
   const { t } = useTranslation();
-  const langChangeHandler = ({ target: { value } }) => {
-    i18n.changeLanguage(value);
-  };
-
-  const currentLanguage = i18n.language;
 
   return (
-    <header>
-      <span>{t('creatorName')}</span>
+    <header className={header}>
+      <span className={myNameSpan}>{t('creatorName')}</span>
 
-      <select onChange={langChangeHandler} defaultValue={currentLanguage}>
-        {LANGUAGES.map(lang => (
-          <option key={lang} value={lang}>
-            {t(lang)}
-          </option>
-        ))}
-      </select>
+      <LanguageChoise />
     </header>
   );
 };

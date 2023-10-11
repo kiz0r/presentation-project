@@ -1,0 +1,14 @@
+.languageButton {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1em;
+  padding: 0.5em 1em;
+}
+
+.languageOption {
+  & > li {
+    padding: 0.5em;
+    cursor: pointer;
+  }
+}
