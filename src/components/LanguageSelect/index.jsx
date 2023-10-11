@@ -50,7 +50,7 @@ const ulVariants = {
   }
 }
 
-const LanguageChoise = () => {
+const LanguageSelect = () => {
   const { t } = useTranslation()
   const [isOpen, setIsOpen] = useState(false)
 
@@ -111,4 +111,4 @@ const LanguageChoise = () => {
   )
 }
 
-export default LanguageChoise
+export default LanguageSelect

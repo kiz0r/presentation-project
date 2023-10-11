@@ -1,13 +1,13 @@
 .header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 .myNameSpan {
   font-size: 16px;
   font-weight: 500;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   padding: 0.8em 1.2em;
   border-radius: 40px;
   background-color: #ba3939;
