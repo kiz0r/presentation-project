@@ -2,17 +2,19 @@ import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import Header from '../Header'
 import Button from '../Button'
+import myPhoto from '../../common/images/myPhoto.png'
 import styles from './FrontSection.module.scss'
 
 // TODO FOR TODAY
-// ? add colors to variables and refactor some styles
-// ? add images to the project
+// * add colors to variables and refactor some styles
+// * add images to the project
 // ? finish FrontSection Component
 
 const FrontSection = () => {
   const { t } = useTranslation()
   return (
     <>
+      <div className={styles.bg}></div>
       <Header />
       <div className={styles.contentWrapper}>
         <motion.h2
@@ -31,6 +33,8 @@ const FrontSection = () => {
         >
           Web Developer
         </motion.h1>
+        <img className={styles.myPhoto} src={myPhoto} alt='my photo' />
+
         <Button>{t('makeAnOrder')}</Button>
       </div>
     </>

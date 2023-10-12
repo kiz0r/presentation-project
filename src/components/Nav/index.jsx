@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <nav className={styles.navigationPanel}>
       {NAV_CONTENT.map(l => (
-        <a key={l} href={`#${l}`}>
+        <a className={styles.navLink} key={l} href={`#${l}`}>
           {t(l)}
         </a>
       ))}
