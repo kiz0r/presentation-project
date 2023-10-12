@@ -1,0 +1,17 @@
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5rem;
+  min-height: 100vh;
+
+  p {
+    flex-wrap: wrap;
+    font-size: 24px;
+    width: 50%;
+  }
+
+  & > p:nth-child(even) {
+    align-self: flex-end;
+  }
+}

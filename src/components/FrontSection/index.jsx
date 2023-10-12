@@ -16,7 +16,7 @@ const FrontSection = () => {
     <>
       <div className={styles.bg}></div>
       <Header />
-      <div className={styles.contentWrapper}>
+      <section className={styles.contentWrapper}>
         <motion.h2
           animate={{ y: 0, opacity: 1 }}
           initial={{ y: 100, opacity: 0 }}
@@ -36,7 +36,7 @@ const FrontSection = () => {
         <img className={styles.myPhoto} src={myPhoto} alt='my photo' />
 
         <Button>{t('makeAnOrder')}</Button>
-      </div>
+      </section>
     </>
   )
 }
