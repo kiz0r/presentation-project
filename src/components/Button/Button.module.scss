@@ -1,17 +1,19 @@
+@import '../../common/styles/vars';
+
 .btn {
   font-size: 16px;
   font-weight: 500;
   font-family: 'Raleway', sans-serif;
   padding: 0.8em 1.2em;
   clip-path: inset(0% 0% 0% 0% round 25px);
-  background-color: #ba3939;
+  background-color: $accent-red;
   border: none;
-  color: #f2f0d8;
+  color: $text-color;
   cursor: pointer;
   transition: background-color ease 0.7s;
   width: fit-content;
 
   &:hover {
-    background-color: #992c2c;
+    background-color: $accent-hover-red;
   }
 }

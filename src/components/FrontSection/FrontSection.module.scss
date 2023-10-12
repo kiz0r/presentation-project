@@ -1,16 +1,20 @@
+@import '../../common/styles/vars';
+
 .headline {
   font-family: Raleway, sans-serif;
   font-size: 64px;
   font-weight: 800;
   text-transform: uppercase;
 
-  text-shadow: 1px 1px #ba3939, 2px 2px #ba3939, 3px 3px #ba3939,
-    4px 4px #ba3939, 5px 5px #ba3939, 6px 6px #ba3939, 7px 7px #ba3939,
-    8px 8px #ba3939, 9px 9px #ba3939, 10px 10px #ba3939, 11px 11px #ba3939,
-    12px 12px #ba3939, 13px 13px #ba3939, 14px 14px #ba3939, 15px 15px #ba3939,
-    16px 16px #ba3939, 17px 17px #ba3939, 18px 18px #ba3939, 19px 19px #ba3939,
-    20px 20px #ba3939, 21px 21px #ba3939, 22px 22px #ba3939, 23px 23px #ba3939,
-    24px 24px #ba3939, 25px 25px #ba3939, 26px 26px #ba3939;
+  text-shadow: 1px 1px $accent-red, 2px 2px $accent-red, 3px 3px $accent-red,
+    4px 4px $accent-red, 5px 5px $accent-red, 6px 6px $accent-red,
+    7px 7px $accent-red, 8px 8px $accent-red, 9px 9px $accent-red,
+    10px 10px $accent-red, 11px 11px $accent-red, 12px 12px $accent-red,
+    13px 13px $accent-red, 14px 14px $accent-red, 15px 15px $accent-red,
+    16px 16px $accent-red, 17px 17px $accent-red, 18px 18px $accent-red,
+    19px 19px $accent-red, 20px 20px $accent-red, 21px 21px $accent-red,
+    22px 22px $accent-red, 23px 23px $accent-red, 24px 24px $accent-red,
+    25px 25px $accent-red, 26px 26px $accent-red;
 }
 
 .headlineAddition {

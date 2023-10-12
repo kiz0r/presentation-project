@@ -4,6 +4,11 @@ import Header from '../Header'
 import Button from '../Button'
 import styles from './FrontSection.module.scss'
 
+// TODO FOR TODAY
+// ? add colors to variables and refactor some styles
+// ? add images to the project
+// ? finish FrontSection Component
+
 const FrontSection = () => {
   const { t } = useTranslation()
   return (
