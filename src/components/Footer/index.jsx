@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { SOCIAL, CONTACTS } from '../../constants.jsx'
 
 import styles from './Footer.module.scss'
+import List from '../List/index.jsx'
 
 const Footer = () => {
   const { t } = useTranslation()
@@ -14,26 +15,20 @@ const Footer = () => {
         <span>{t('weekEnd')}</span>
       </div>
 
-      <ul className={styles.social}>
-        {CONTACTS.map(contact => (
-          <li key={contact.href}>
-            <a className={styles.socialLink} href={contact.href}>
-              {contact.contact}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <List
+        items={CONTACTS}
+        keyProp='href'
+        linkProp='href'
+        textProp='contact'
+      />
 
-      <ul className={styles.social}>
-        {SOCIAL.map(social => (
-          <li key={social.title}>
-            <a target='_blank' href={social.href} className={styles.socialLink}>
-              <div>{social.icon}</div>
-              {social.title}
-            </a>
-          </li>
-        ))}
-      </ul>
+      <List
+        items={SOCIAL}
+        keyProp='href'
+        linkProp='href'
+        textProp='title'
+        iconProp='icon'
+      />
     </footer>
   )
 }
