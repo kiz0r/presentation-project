@@ -8,7 +8,7 @@ const Header = () => {
   const { t } = useTranslation()
 
   const pageReloadHandler = () => {
-    window.location.reload()
+    window.location.replace('/')
   }
 
   return (

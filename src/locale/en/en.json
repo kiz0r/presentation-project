@@ -8,5 +8,7 @@
   "en": "English",
   "makeAnOrder": "Make an order",
   "aboutMeTextLeft": "Hello! My name is Kyrylo Homenko, and I am a FullStack Web developer. I am a Ukrainian creative professional who is continuously evolving in this field. I started working in web development in 2022, learning through courses and concurrently studying technologies such as HTML, CSS, JavaScript, and other in-demand technologies.",
-  "aboutMeTextRight": "Currently, I am actively engaged in work and personal growth in this sphere while pursuing higher technical education in Europe. With over 800 hours of practical experience under my belt, numerous satisfied clients, and a multitude of completed projects, I'm dedicated to further advancing in the world of web development!"
+  "aboutMeTextRight": "Currently, I am actively engaged in work and personal growth in this sphere while pursuing higher technical education in Europe. With over 800 hours of practical experience under my belt, numerous satisfied clients, and a multitude of completed projects, I'm dedicated to further advancing in the world of web development!",
+  "workDays": "Mo - Fri : work days",
+  "weekEnd": "Sat - Sun : weekend"
 }
