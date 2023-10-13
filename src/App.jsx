@@ -1,17 +1,10 @@
+import MainPage from './pages/MainPage'
 import './App.scss'
-import AboutMe from './components/AboutMe'
-import Footer from './components/Footer'
-import FrontSection from './components/FrontSection'
 import './locale'
+import ThankYouPage from './pages/ThankYouPage'
 
 function App () {
-  return (
-    <>
-      <FrontSection />
-      <AboutMe />
-      <Footer />
-    </>
-  )
+  return <ThankYouPage />
 }
 
 export default App

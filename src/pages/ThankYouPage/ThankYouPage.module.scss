@@ -1,0 +1,40 @@
+.thankYou {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  font-family: 'Raleway', sans-serif;
+
+  min-height: 100vh;
+
+  background: url('../../common/images/thankYouBg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  padding: 12rem 0;
+
+  gap: 3rem;
+
+  & > h1 {
+    font-size: 64px;
+    font-weight: 800;
+  }
+
+  & > p {
+    font-size: 24px;
+    font-weight: 500;
+  }
+}
+
+.btnContainer {
+  // align-self: end;
+}
