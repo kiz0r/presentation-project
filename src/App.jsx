@@ -4,7 +4,7 @@ import './locale'
 import ThankYouPage from './pages/ThankYouPage'
 
 function App () {
-  return <ThankYouPage />
+  return <MainPage />
 }
 
 export default App
