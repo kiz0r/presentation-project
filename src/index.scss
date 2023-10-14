@@ -1,9 +1,9 @@
 // #BA3939
 // BABES KAI
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Raleway:wght@400;500;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300&family=Raleway:wght@400;500;600;800&display=swap');
 
 :root {
-  font-family: Inter, "Raleway", sans-serif;
+  font-family: Inter, 'Raleway', sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -144,7 +144,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
