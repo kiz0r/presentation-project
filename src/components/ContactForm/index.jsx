@@ -31,24 +31,35 @@ const ContactForm = () => {
     >
       {({ isValid, dirty }) => (
         <Form className={styles.contactForm}>
-          <FormInput placeholder={t('formName')} name='userName' type='text' />
-          <FormInput placeholder={t('formPhone')} name='phone' type='phone' />
-          <FormInput placeholder={t('formEmail')} name='email' type='email' />
-          <FormSelect name='category'>
-            <option value='' disabled defaultValue>
-              {t('selectCategory')}
-            </option>
-            {CATEGORIES.map(c => (
-              <option key={c} value={c}>
-                {t(c)}
+          <div className={styles.formRow}>
+            <FormInput
+              placeholder={t('formName')}
+              name='userName'
+              type='text'
+            />
+            <FormInput placeholder={t('formPhone')} name='phone' type='phone' />
+          </div>
+          <div className={styles.formRow}>
+            <FormInput placeholder={t('formEmail')} name='email' type='email' />
+            <FormSelect name='category'>
+              <option value='' disabled defaultValue>
+                {t('selectCategory')}
               </option>
-            ))}
-          </FormSelect>
-          <FormTextArea
-            placeholder={t('formMessage')}
-            name='message'
-            rows={8}
-          />
+              {CATEGORIES.map(c => (
+                <option key={c} value={c}>
+                  {t(c)}
+                </option>
+              ))}
+            </FormSelect>
+          </div>
+          <div className={styles.formRow}>
+            <FormTextArea
+              placeholder={t('formMessage')}
+              name='message'
+              rows={8}
+            />
+          </div>
+
           <Button type='submit' disabled={!isValid || !dirty}>
             {t('submit')}
           </Button>

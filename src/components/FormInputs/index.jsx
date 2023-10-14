@@ -7,7 +7,7 @@ const FormInput = ({ name, label, ...restProps }) => {
     <Field name={name}>
       {({ field, form: { errors, touched }, meta }) => {
         return (
-          <label>
+          <label className={styles.formLabel}>
             {label && <span>{label}</span>}
             <input {...restProps} {...field} className={styles.formInput} />
             {meta.error && meta.touched && <div>{meta.error}</div>}
@@ -22,7 +22,7 @@ const FormTextArea = ({ label, ...restProps }) => {
   const [field, meta] = useField(restProps)
 
   return (
-    <label>
+    <label className={styles.formLabel}>
       {label && <span>{label}</span>}
       <textarea {...field} {...restProps} className={styles.formInput} />
       {meta.error && meta.touched && <div>{meta.error}</div>}
@@ -34,7 +34,7 @@ const FormSelect = ({ label, ...restProps }) => {
   const [field, meta] = useField(restProps)
 
   return (
-    <label>
+    <label className={styles.formLabel}>
       {label && <span>{label}</span>}
       <select {...field} {...restProps} className={styles.formInput} />
       {meta.error && meta.touched && <div>{meta.error}</div>}
