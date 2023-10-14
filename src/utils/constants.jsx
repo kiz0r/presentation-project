@@ -80,3 +80,5 @@ export const PROS = [
     body: 'supportBody'
   }
 ]
+
+export const CATEGORIES = ['landing', 'corporative', 'businessCard']

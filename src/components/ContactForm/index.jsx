@@ -1,10 +1,11 @@
 import { Form, Formik } from 'formik'
 import { useTranslation } from 'react-i18next'
 import { CONTACT_FORM_VALIDATION_SCHEMA } from '../../utils/validation'
-import FormInput from '../FormInput'
+import { FormInput, FormTextArea, FormSelect } from '../FormInputs'
 import Button from '../Button'
 
 import styles from './ContactForm.module.scss'
+import { CATEGORIES } from '../../utils/constants'
 
 const ContactForm = () => {
   const { t } = useTranslation()
@@ -28,17 +29,31 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
       validationSchema={CONTACT_FORM_VALIDATION_SCHEMA}
     >
-      <Form className={styles.contactForm}>
-        <FormInput placeholder={t('formName')} name='userName' type='text' />
-        <FormInput placeholder={t('formPhone')} name='phone' type='phone' />
-        <FormInput placeholder={t('formEmail')} name='email' type='email' />
-        <FormInput
-          placeholder={t('formMessage')}
-          name='message'
-          type='textarea'
-        />
-        <Button type='submit'>{t('submit')}</Button>
-      </Form>
+      {({ isValid, dirty }) => (
+        <Form className={styles.contactForm}>
+          <FormInput placeholder={t('formName')} name='userName' type='text' />
+          <FormInput placeholder={t('formPhone')} name='phone' type='phone' />
+          <FormInput placeholder={t('formEmail')} name='email' type='email' />
+          <FormSelect name='category'>
+            <option value='' disabled defaultValue>
+              {t('selectCategory')}
+            </option>
+            {CATEGORIES.map(c => (
+              <option key={c} value={c}>
+                {t(c)}
+              </option>
+            ))}
+          </FormSelect>
+          <FormTextArea
+            placeholder={t('formMessage')}
+            name='message'
+            rows={8}
+          />
+          <Button type='submit' disabled={!isValid || !dirty}>
+            {t('submit')}
+          </Button>
+        </Form>
+      )}
     </Formik>
   )
 }

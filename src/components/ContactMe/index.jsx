@@ -9,7 +9,7 @@ const ContactMe = () => {
 
   return (
     <section id='feedBack' className={styles.contactMeSection}>
-      <h2>{t('skills')}</h2>
+      <h2>{t('contactMeSection')}</h2>
       <div className={styles.contentWrapper}>
         <ContactForm />
         <img src={laptopImg} alt='laptop' />
