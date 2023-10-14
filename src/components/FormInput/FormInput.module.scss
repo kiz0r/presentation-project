@@ -1,0 +1,23 @@
+@import '../../common/styles/vars';
+
+.formInput {
+  color: $text-color;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  background: transparent;
+
+  &[type='phone'] {
+    font-family: 'Inter', sans-serif;
+  }
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+  }
+
+  padding: 1rem;
+  border: 1px solid $text-color;
+  outline: none;
+}

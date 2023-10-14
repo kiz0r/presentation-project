@@ -1,0 +1,9 @@
+.contactForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+
+  & > button {
+    margin-left: auto;
+  }
+}
