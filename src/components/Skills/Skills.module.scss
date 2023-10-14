@@ -1,0 +1,41 @@
+@import '../../common/styles/vars.scss';
+
+.skillSection {
+  display: flex;
+  align-items: start;
+  gap: 3rem;
+  justify-content: space-between;
+
+  padding: 2rem 0;
+}
+
+.skillBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 25%;
+  gap: 1.5rem;
+}
+
+.skillHeadline {
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $accent-red;
+  background-color: $text-color;
+  padding: 1rem;
+  text-align: center;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+
+  text-align: center;
+
+  & > li {
+    line-height: 2rem;
+  }
+}

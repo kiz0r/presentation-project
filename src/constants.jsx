@@ -40,3 +40,27 @@ export const SOCIAL = [
     icon: <FaTelegram />
   }
 ]
+
+export const SKILLS = [
+  {
+    field: 'programming',
+    skills: [
+      'React.js',
+      'JavaScript/TypeScript',
+      'GIT',
+      'Node.js',
+      'MongoDB',
+      'Docker',
+      'CSS (SASS/SCSS)',
+      'BEM'
+    ]
+  },
+  {
+    field: 'education',
+    skills: ['freshcode', 'khai', 'cvut']
+  },
+  {
+    field: 'languages',
+    skills: ['ukrainian', 'russian', 'english', 'czech']
+  }
+]
