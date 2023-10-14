@@ -1,0 +1,41 @@
+@import '../../common/styles/vars';
+
+.prosSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 4rem;
+  padding: 2rem 0;
+
+  background: $text-color;
+
+  color: $background-color;
+  text-align: center;
+  font-family: 'Raleway', sans-serif;
+
+  margin-bottom: 2rem; // ! DELETE LATER
+}
+
+.prosContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.horLine {
+  height: 2px;
+  margin: 0 auto;
+  width: 60%;
+  background: $accent-red;
+}
+
+.body {
+  font-size: 16px;
+  line-height: 1.5rem;
+}

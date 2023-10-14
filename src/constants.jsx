@@ -64,3 +64,19 @@ export const SKILLS = [
     skills: ['ukrainian', 'russian', 'english', 'czech']
   }
 ]
+
+export const PROS = [
+  {
+    title: 'optimization',
+    body: 'optimizationBody'
+  },
+
+  {
+    title: 'deadline',
+    body: 'deadlineBody'
+  },
+  {
+    title: 'support',
+    body: 'supportBody'
+  }
+]
