@@ -3,23 +3,41 @@
 
 .skillSection {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem 0;
+
+  & > h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    margin-left: 2rem;
+  }
+
+  min-height: 100vh;
+}
+
+.skillsContainer {
+  display: flex;
   align-items: start;
   justify-content: space-between;
-  gap: 3rem;
-
-  padding: 2rem 0;
+  gap: 4rem;
 }
 
 .skillBox {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   flex-wrap: wrap;
   gap: 1.5rem;
 }
 
 .skillHeadline {
-  font-family: 'Bebas Kai', sans-serif;
-
+  font-family: 'Bebas Kai', '';
+  font-weight: 500;
   font-size: 64px;
   text-transform: uppercase;
   color: $accent-red;
@@ -31,10 +49,13 @@
 .skillsList {
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
 
-  gap: 1rem;
-
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
   text-align: center;
+
+  width: inherit;
 
   & > li {
     line-height: 2rem;
