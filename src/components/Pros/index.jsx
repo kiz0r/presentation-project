@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import HorizontalLine from '../HorizontalLine'
-import { PROS } from '../../constants'
+import { PROS } from '../../utils/constants'
 
 import styles from './Pros.module.scss'
 

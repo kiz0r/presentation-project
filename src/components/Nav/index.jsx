@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next'
-import { NAV_CONTENT } from '../../constants.jsx'
+import { NAV_CONTENT } from '../../utils/constants'
 import styles from './Nav.module.scss'
 
 const Nav = () => {

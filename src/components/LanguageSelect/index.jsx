@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { motion, AnimatePresence } from 'framer-motion'
 import i18n from 'i18next'
 import { BiSolidDownArrow } from 'react-icons/bi'
-import { LANGUAGES } from '../../constants.jsx'
+import { LANGUAGES } from '../../utils/constants.jsx'
 import styles from './LanguageChoise.module.scss'
 
 const { languageButton, languageOption } = styles

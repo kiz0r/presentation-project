@@ -1,5 +1,5 @@
 import { useTranslation, Trans } from 'react-i18next'
-import { SKILLS } from '../../constants'
+import { SKILLS } from '../../utils/constants'
 
 import styles from './Skills.module.scss'
 

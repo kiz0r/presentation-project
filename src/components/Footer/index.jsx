@@ -1,6 +1,5 @@
-// todo : create footer
 import { useTranslation } from 'react-i18next'
-import { SOCIAL, CONTACTS } from '../../constants.jsx'
+import { SOCIAL, CONTACTS } from '../../utils/constants'
 
 import styles from './Footer.module.scss'
 import List from '../List/index.jsx'
