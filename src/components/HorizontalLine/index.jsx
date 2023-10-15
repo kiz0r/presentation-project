@@ -17,8 +17,6 @@ const HorizontalLine = () => {
   return (
     <motion.div
       className={styles.horLine}
-      initial='hidden'
-      whileInView='visible'
       variants={horizontalLineVariants}
       transition={{ delay: 1, duration: 1 }}
       viewport={{ amount: 0.5 }}
