@@ -1,20 +1,27 @@
 import { motion } from 'framer-motion'
-import { useInView } from 'react-intersection-observer'
 
 import styles from './HorizontalLine.module.scss'
 
-const HorizontalLine = () => {
-  const [ref, inView] = useInView({
-    triggerOnce: true
-  })
+const horizontalLineVariants = {
+  visible: {
+    opacity: 1,
+    width: '60%'
+  },
+  hidden: {
+    opacity: 0,
+    width: 0
+  }
+}
 
+const HorizontalLine = () => {
   return (
     <motion.div
       className={styles.horLine}
-      initial={{ width: 0 }}
-      animate={{ width: inView ? '60%' : 0 }}
+      initial='hidden'
+      whileInView='visible'
+      variants={horizontalLineVariants}
       transition={{ delay: 1, duration: 1 }}
-      ref={ref}
+      viewport={{ amount: 0.5 }}
     />
   )
 }
