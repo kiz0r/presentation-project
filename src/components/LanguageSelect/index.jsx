@@ -88,8 +88,8 @@ const LanguageSelect = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.ul
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            initial={{ opacity: 0, width: 0 }}
+            animate={{ opacity: 1, width: 100 }}
             variants={ulVariants}
             className={languageOption}
             style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
