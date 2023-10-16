@@ -1,18 +1,7 @@
+@use '../../common/styles/mixins' as mixins;
+
 .contactMeSection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 4rem;
-  padding: 2rem 0;
-
-  & > h2 {
-    font-family: 'Raleway', sans-serif;
-    font-weight: 500;
-    font-size: 24px;
-    margin-left: 2rem;
-  }
-
-  min-height: 100vh;
+  @include mixins.section;
 }
 
 .contentWrapper {
