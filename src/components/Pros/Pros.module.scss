@@ -1,18 +1,23 @@
+@use '../../common/styles/mixins' as mixins;
 @import '../../common/styles/vars';
 
 .prosSection {
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
+  // display: flex;
+  // align-items: start;
+  // justify-content: space-between;
 
-  gap: 4rem;
-  padding: 2rem 0;
+  // gap: 4rem;
+  // padding: 2rem 0;
 
   background: $accent-white;
 
   color: $accent-dark;
   text-align: center;
   font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+  @include mixins.wrapper(row, space-between, center);
 }
 
 .prosContainer {

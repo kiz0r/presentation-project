@@ -15,7 +15,15 @@
   font-size: 18px;
   background: transparent;
 
+  &:active {
+    background: transparent;
+  }
+
   resize: none;
+
+  & > option:not(:disabled) {
+    color: $accent-dark;
+  }
 
   &[type='phone'] {
     font-family: 'Inter', sans-serif;

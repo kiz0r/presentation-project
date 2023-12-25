@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import Wrapper from '../Wrapper'
 import Button from '../Button'
 import Nav from '../Nav'
 import LanguageSelect from '../LanguageSelect'
@@ -13,9 +14,11 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <Button onClick={pageReloadHandler}>{t('creatorName')}</Button>
-      <Nav />
-      <LanguageSelect />
+      <Wrapper className={styles.wrapper}>
+        <Button onClick={pageReloadHandler}>{t('creatorName')}</Button>
+        <Nav />
+        <LanguageSelect />
+      </Wrapper>
     </header>
   )
 }

@@ -1,0 +1,12 @@
+@use '../../common/styles/mixins' as mixins;
+@import '../../common/styles/vars';
+
+.wrapper {
+  @include mixins.wrapper(row, space-evenly, center);
+
+  // align-items: center;
+  // justify-content: space-evenly;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}

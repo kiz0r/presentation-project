@@ -1,7 +1,13 @@
+@use '../../common/styles/mixins' as mixins;
+
 .header {
-  min-height: 200px;
-  display: flex;
-  justify-content: space-between;
+  @include mixins.section;
   align-items: baseline;
-  padding-top: 2rem;
+  min-height: 200px;
+  // height: 100%;
+  // padding-bottom: 10rem;
+}
+
+.wrapper {
+  @include mixins.wrapper(row, space-between, baseline);
 }

@@ -2,8 +2,8 @@
 @import '../../common/styles/vars.scss';
 @import '../../common/fonts/fonts.scss';
 
-.skillSection {
-  @include mixins.section;
+.wrapper {
+  @include mixins.wrapper(column, flex-start, flex-start);
 }
 
 .skillsContainer {
@@ -18,13 +18,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   flex-wrap: wrap;
   gap: 1.5rem;
 }
 
 .skillHeadline {
-  font-family: 'Bebas Kai', '';
+  font-family: Bebas Kai;
   font-weight: 500;
   font-size: 64px;
   text-transform: uppercase;

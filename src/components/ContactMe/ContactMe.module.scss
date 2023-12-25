@@ -4,9 +4,13 @@
   @include mixins.section;
 }
 
+.wrapper {
+  @include mixins.wrapper(column, space-between, flex-start);
+}
+
 .contentWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 4rem;
+  width: 100%;
 }

@@ -12,12 +12,12 @@ const MainPage = () => {
     <>
       <Header />
       <main>
-        <FrontSection />
+        {/* <FrontSection /> */}
         <AboutMe />
         <Skills />
         <Pros />
         <ContactMe />
-        <ServicesSites />
+        {/* <ServicesSites /> */}
       </main>
       <Footer />
     </>
